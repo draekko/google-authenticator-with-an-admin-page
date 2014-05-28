@@ -359,7 +359,8 @@ function profile_personal_options() {
 	}
 	echo "var authorityissuer = '".$authissuer."';\n";
 
-  	echo <<<ENDOFJS
+  	//echo <<<ENDOFJS
+  	?>
   	//Create new secret and display it
 	jQuery('#GA_newsecret').bind('click', function() {
 		// Remove existing QRCode
@@ -369,6 +370,13 @@ function profile_personal_options() {
 		data['nonce']	= GAnonce;
 		jQuery.post(ajaxurl, data, function(response) {
   			jQuery('#GA_secret').val(response['new-secret']);
+<?php 
+	$authissuer = trim( sanitize_text_field( get_option('googleauthenticator_code_issuer') ) );
+	if (empty(authissuer)) {
+		$authissuer = 'WordPress';
+	}
+	echo "var authorityissuer = '".$authissuer."';\n";
+?> 
   			var qrcode="otpauth://totp/"+authorityissuer+":"+escape(jQuery('#GA_description').val())+"?secret="+jQuery('#GA_secret').val()+"&issuer="+authorityissuer;
 			jQuery('#GA_QRCODE').qrcode(qrcode);
  			jQuery('#GA_QR_INFO').show('slow');
@@ -417,14 +425,28 @@ function profile_personal_options() {
 	}
 
 	function ShowQRCode() {
-		var qrcode="otpauth://totp/WordPress:"+escape(jQuery('#GA_description').val())+"?secret="+jQuery('#GA_secret').val()+"&issuer=WordPress";
+<?php 
+	$authissuer = trim( sanitize_text_field( get_option('googleauthenticator_code_issuer') ) );
+	if (empty(authissuer)) {
+		$authissuer = 'WordPress';
+	}
+	echo "var authorityissuer = '".$authissuer."';\n";
+?> 
+		var qrcode="otpauth://totp/"+authorityissuer+":"+escape(jQuery('#GA_description').val())+"?secret="+jQuery('#GA_secret').val()+"&issuer="+authorityissuer;
 		jQuery('#GA_QRCODE').qrcode(qrcode);
       jQuery('#GA_QR_INFO').show('slow');
 	}
 
 	function ShowOrHideQRCode() {
 		if (jQuery('#GA_QR_INFO').is(':hidden')) {
-			var qrcode="otpauth://totp/WordPress:"+escape(jQuery('#GA_description').val())+"?secret="+jQuery('#GA_secret').val()+"&issuer=WordPress";
+<?php 
+	$authissuer = trim( sanitize_text_field( get_option('googleauthenticator_code_issuer') ) );
+	if (empty(authissuer)) {
+		$authissuer = 'WordPress';
+	}
+	echo "var authorityissuer = '".$authissuer."';\n";
+?> 
+			var qrcode="otpauth://totp/"+authorityissuer+":"+escape(jQuery('#GA_description').val())+"?secret="+jQuery('#GA_secret').val()+"&issuer="+authorityissuer;
 			jQuery('#GA_QRCODE').qrcode(qrcode);
 	      jQuery('#GA_QR_INFO').show('slow');
 		} else {
@@ -433,7 +455,7 @@ function profile_personal_options() {
 		}
 	}
 </script>
-ENDOFJS;
+<?php //ENDOFJS;
 }
 
 /**
@@ -688,4 +710,5 @@ function do_update_admin_settings() {
 } // end class
 
 $google_authenticator = new GoogleAuthenticator;
+
 
