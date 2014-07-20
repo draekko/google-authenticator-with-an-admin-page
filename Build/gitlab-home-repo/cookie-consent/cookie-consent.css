@@ -1,0 +1,32 @@
+#cc_message {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    min-height: 50px;
+    line-height: 50px;
+    z-index:2000;
+    opacity: 0.9;
+    font-size: 120%;
+}
+
+#cc_message a {
+    font-weight:600;
+}
+
+#cc_message a:hover {
+    color: #CFBD25;
+}
+
+.cc_dismiss_button {
+    font-size: 160%;
+    vertical-align: middle;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.cc_delete_button {
+    cursor: pointer;
+}

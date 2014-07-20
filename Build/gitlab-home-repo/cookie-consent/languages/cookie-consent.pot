@@ -1,0 +1,102 @@
+# Copyright (C) 2014  Cookie Consent
+# This file is distributed under the same license as the  Cookie Consent package.
+msgid ""
+msgstr ""
+"Project-Id-Version:  Cookie Consent 1.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/cookie-consent\n"
+"POT-Creation-Date: 2014-02-19 18:16:32+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: cc-admin.php:4
+msgid ""
+"This site uses cookies. <a href=\"/cookies\">Find out more about this "
+"site&rsquo;s cookies.</a> [cc_dismiss]"
+msgstr ""
+
+#: cc-admin.php:6
+msgid "Cookies"
+msgstr ""
+
+#: cc-admin.php:7
+msgid ""
+"<h1>Cookies</h1>\n"
+"<p>This site uses cookies. Most websites do this. Our cookies aren't used to "
+"identify you personally, they're here to make the site work better and allow "
+"us to analyse how it's being used. You can delete these cookies as you wish, "
+"but some aspects of the site may not work correctly without cookies.</p>\n"
+"<p>To learn more about cookies and how to manage them, visit <a href="
+"\"http://aboutcookies.org\">AboutCookies.org</a>.</p>\n"
+"<h3>Specific Cookies Used</h3>\n"
+"<ul>\n"
+"\t<li>Google Analiyics Cookies &mdash; These cookies are used to track how "
+"people use the site. These cookies include _utma, _utmb, _utmc, and _utmz.</"
+"li>\n"
+"\t<li>Account Cookies &mdash; If you have an account or comment on this "
+"site, cookies are used verify you are the same person when you are logged "
+"in, and your preferences. These include cookies beginning with wordpress_ "
+"and wp-settings-.</li>\n"
+"\t<li>Cookie Message &mdash; Once you have been informed about cookies, a "
+"cookie is stored to track that you have seen the message, and it won't be "
+"shown again. This cookie is named cc_cookie_message.\n"
+"</ul>\n"
+"<p><strong>This page should be completed by the website admin...</strong></p>"
+msgstr ""
+
+#: cc-admin.php:57
+msgid "Settings"
+msgstr ""
+
+#: cc-admin.php:65 cc-admin.php:89
+msgid " Cookie Consent Options"
+msgstr ""
+
+#. #-#-#-#-#  plugin.pot ( Cookie Consent 1.1)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: cc-admin.php:66
+msgid " Cookie Consent"
+msgstr ""
+
+#: cc-admin.php:70
+msgid "You do not have permission to access this page."
+msgstr ""
+
+#: cc-admin.php:84
+msgid "Options saved."
+msgstr ""
+
+#: cc-admin.php:95
+msgid ""
+"Cookie info message displayed to the user (optionally use the [cc_dismiss] "
+"shortcode to add a dismiss button): "
+msgstr ""
+
+#: cc-admin.php:99
+msgid "Cookie info message background color: "
+msgstr ""
+
+#: cookie-consent.php:56
+msgid "Delete cookies and leave"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://wordpress.org/extend/plugins/cookie-consent"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Displays an unobtrusive cookie information bar when a user first visits the "
+"site."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Stefan Senk"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.senktec.com"
+msgstr ""
